@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+
+@theme {
+  --animate-scroll-line: scroll-line 2s ease-in-out infinite;
+
+  @keyframes scroll-line {
+    0% {
+      transform: translateY(-100%);
+    }
+    70%,
+    100% {
+      transform: translateY(200%);
+    }
+  }
+
+  --font-playfair: var(--font-playfair);
+  --font-mono-dm: var(--font-dm-mono), 'SF Mono', monospace;
+  --font-ubuntu: var(--font-ubuntu-sans), sans-serif;
+
+  --spacing: 1px;
+
+  --text-h1: 1.5rem;
+  --text-h2: 1.375rem;
+  --text-h3: 1.25rem;
+  --text-body: 1rem;
+  --text-caption: 0.875rem;
+  --text-smallText: 0.75rem;
+  --text-textXs: 0.625rem;
+
+  --color-background-base: #f2ebe0;
+  --color-background-surface: #fbf6ee;
+  --color-background-elevated: #ffffff;
+  --color-background-inverse: #1a1614;
+
+  --color-text-primary: #2b2521;
+  --color-text-secondary: #7a6f63;
+  --color-text-muted: #a89d8f;
+  --color-text-inverse: #f7f1e7;
+  --color-text-on-accent: #ffffff;
+
+  --color-border: #ddd2c2;
+  --color-border-subtle: #e8ddcb;
+  --color-border-strong: #bfb09c;
+
+  --color-accent-base: #c9784f;
+  --color-accent-hover: #b5663f;
+  --color-accent-active: #9e5634;
+  --color-accent-soft: #f3e3d3;
+
+  --color-status-success: #4f9e6b;
+  --color-status-success-soft: #e7f0e6;
+  --color-status-warning: #d9a441;
+  --color-status-warning-soft: #f6ecd9;
+  --color-status-error: #c9534f;
+  --color-status-error-soft: #f5e3df;
+  --color-status-info: #5b8fa8;
+  --color-status-info-soft: #e3edee;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-9: 9px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-14: 14px;
+  --radius-16: 16px;
+  --radius-17: 17px;
+  --radius-18: 18px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-100: 100px;
+  --radius-full: 100px;
+}
