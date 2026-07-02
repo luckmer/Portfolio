@@ -19,12 +19,15 @@ export const typography = cva('not-italic select-none', {
 
     color: {
       white: 'text-white',
+      light: 'text-text-light',
       primary: 'text-text-primary',
+      bone: 'text-background-bone',
       secondary: 'text-text-secondary',
       muted: 'text-text-muted',
       inverse: 'text-text-inverse',
       onAccent: 'text-text-on-accent',
       accent: 'text-accent-base',
+      soft: 'text-accent-soft',
       accentHover: 'text-accent-hover',
       accentActive: 'text-accent-active',
       success: 'text-status-success',
@@ -60,6 +63,7 @@ export const typography = cva('not-italic select-none', {
       default: 'font-ubuntu',
       mono: 'font-mono-dm',
       playfair: 'font-playfair',
+      jetbrains: 'font-jetbrains-mono',
     },
   },
   defaultVariants: {

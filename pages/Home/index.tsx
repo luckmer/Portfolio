@@ -1,5 +1,7 @@
 'use client'
 
+import Contact from '@components/Contact'
+import SelectedWork from '@components/SelectedWork'
 import { Typography } from '@components/Typography'
 import { motion, Variants } from 'framer-motion'
 
@@ -44,8 +46,8 @@ const Home = () => {
       variants={mainVariants}
       initial='hidden'
       animate='visible'
-      className='w-screen h-screen flex flex-col overflow-y-auto'>
-      <div className='min-h-screen flex items-center justify-center flex-col relative p-8 gap-120'>
+      className='w-screen min-h-screen flex flex-col select-none'>
+      <div className='min-h-screen flex items-center justify-center flex-col relative gap-120 w-full mb-200'>
         <div className='flex flex-col items-center justify-center gap-120 h-full'>
           <div className='flex flex-col items-center relative'>
             <div className='absolute bottom-full left-full -translate-x-full translate-y-full w-full h-full rounded-full bg-[radial-gradient(circle_at_40%_35%,rgba(194,84,45,0.13),transparent_70%)] blur-[10px] pointer-events-none' />
@@ -80,7 +82,6 @@ const Home = () => {
               ))}
             </motion.div>
           </div>
-
           <div>
             <Typography text='body' font='mono' uppercase class='font-500'>
               Frontend Engineer & Opensource Contributor
@@ -96,9 +97,8 @@ const Home = () => {
           </Typography>
         </div>
       </div>
-      {Array.from({ length: 5 }).map((_, i) => (
-        <div key={i}>dsds dsds ds</div>
-      ))}
+      <SelectedWork />
+      <Contact />
     </motion.main>
   )
 }

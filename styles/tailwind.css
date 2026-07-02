@@ -16,6 +16,7 @@
   --font-playfair: var(--font-playfair);
   --font-mono-dm: var(--font-dm-mono), 'SF Mono', monospace;
   --font-ubuntu: var(--font-ubuntu-sans), sans-serif;
+  --font-jetbrains-mono: var(--font-jetbrains-mono), monospace;
 
   --spacing: 1px;
 
@@ -27,18 +28,21 @@
   --text-smallText: 0.75rem;
   --text-textXs: 0.625rem;
 
+  --color-background-bone: #f4f2ea;
   --color-background-base: #f2ebe0;
   --color-background-surface: #fbf6ee;
   --color-background-elevated: #ffffff;
   --color-background-inverse: #1a1614;
+  --color-background-dark-black: #0c0d0f;
 
   --color-text-primary: #2b2521;
   --color-text-secondary: #7a6f63;
   --color-text-muted: #a89d8f;
   --color-text-inverse: #f7f1e7;
   --color-text-on-accent: #ffffff;
+  --color-text-light: #f8f5f6;
 
-  --color-border: #ddd2c2;
+  --color-border: #050d141a;
   --color-border-subtle: #e8ddcb;
   --color-border-strong: #bfb09c;
 
@@ -47,6 +51,7 @@
   --color-accent-active: #9e5634;
   --color-accent-soft: #f3e3d3;
 
+  --color-orange: #fd551d;
   --color-status-success: #4f9e6b;
   --color-status-success-soft: #e7f0e6;
   --color-status-warning: #d9a441;
