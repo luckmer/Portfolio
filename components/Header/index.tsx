@@ -1,4 +1,5 @@
 'use client'
+import { PixelMark } from '@components/pixelMark'
 import { Typography } from '@components/Typography'
 import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
@@ -29,7 +30,8 @@ const Header = () => {
       animate='visible'
       className='fixed top-0 inset-x-0 z-99 border-b border-line-800 bg-ink-950/70 backdrop-blur-md'>
       <div className='w-full max-w-1360 mx-auto flex flex-row items-center justify-between px-64 h-80'>
-        <Link href='/'>
+        <Link href='/' className=' flex flex-row gap-24 items-center justify-center'>
+          <PixelMark />
           <Typography text='h2' bold>
             PG.
           </Typography>

@@ -2,12 +2,12 @@ import { Typography } from '@components/Typography'
 
 const Footer = () => {
   return (
-    <footer className='bg-ink-900  '>
+    <footer className='bg-ink-900 border-t border-line-800 '>
       <div className='max-w-1360 pt-100 px-64 pb-40 mx-auto border-r border-l border-line-800'>
         <div className='grid grid-cols-[1fr_1fr_1fr_1fr] gap-56 pb-80 border-b border-line-800'>
           <div />
           <div>
-            <Typography text='tiny' color='accent' class='mb-24' uppercase>
+            <Typography text='small' color='accent' class='mb-24' uppercase>
               explore
             </Typography>
             <div className='flex flex-col gap-14'>
@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <Typography text='tiny' color='accent' class='mb-24' uppercase>
+            <Typography text='small' color='accent' class='mb-24' uppercase>
               Elsewhere
             </Typography>
             <div className='flex flex-col gap-14'>

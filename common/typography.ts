@@ -41,6 +41,9 @@ export const typography = cva('not-italic select-none', {
     bold: {
       true: 'font-bold',
     },
+    underline: {
+      true: 'underline',
+    },
 
     left: {
       true: 'text-left',

@@ -51,7 +51,7 @@ const Home = () => {
       initial='hidden'
       animate='visible'
       className='w-full flex flex-col select-none'>
-      <div className='px-60 max-w-1360 mx-auto border-r border-l border-line-800'>
+      <div className='w-full px-60 max-w-1360 mx-auto border-r border-l border-line-800'>
         <div className='pt-190 pb-90 px-8 border-b border-line-800 '>
           <motion.div
             variants={containerVariants}
@@ -62,7 +62,6 @@ const Home = () => {
               <Typography
                 text='caption'
                 uppercase
-                color='muted'
                 class='tracking-[0.22em] text-[13px]! font-light'>
                 {"Hi!, I'm"}
               </Typography>
