@@ -17,14 +17,13 @@ export const typography = cva('not-italic select-none', {
       tinyBold: 'text-textXs font-bold leading-[12px] tracking-[0.02em]',
       custom: '',
     },
-
     color: {
       primary: 'text-fg',
       muted: 'text-fg-muted',
       accent: 'text-accent',
-      950: 'text-ink-950',
-      900: 'text-ink-900',
-      850: 'text-ink-850',
+      '950': 'text-ink-950',
+      '900': 'text-ink-900',
+      '850': 'text-ink-850',
     },
     ellipsis: {
       true: 'text-ellipsis overflow-hidden whitespace-nowrap',
@@ -44,7 +43,6 @@ export const typography = cva('not-italic select-none', {
     underline: {
       true: 'underline',
     },
-
     left: {
       true: 'text-left',
     },

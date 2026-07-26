@@ -1,5 +1,7 @@
 import Button from '@components/Button'
+import Card from '@components/Card'
 import { Typography } from '@components/Typography'
+import { work } from '@static/data'
 
 const SelectedWork = () => {
   return (
@@ -22,6 +24,18 @@ const SelectedWork = () => {
             Archive →
           </Typography>
         </Button>
+      </div>
+      <div className='grid grid-cols-[1fr_1fr_1fr] gap-24'>
+        {work.map((el) => (
+          <Card
+            key={el.id}
+            tags={el.tags}
+            title={el.title}
+            year={el.year}
+            description={el.description}
+            color={el.color}
+          />
+        ))}
       </div>
     </section>
   )

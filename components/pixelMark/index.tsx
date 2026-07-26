@@ -10,7 +10,7 @@ export const PixelMark = () => {
         row.split('').map((c, x) => (
           <span
             key={`${y}-${x}`}
-            className={clsx(c === '1' ? 'bg-accent-dim' : 'bg-transparent')}
+            className={clsx(c === '1' ? 'bg-amber-50' : 'bg-transparent')}
             style={{
               aspectRatio: '1 / 1',
             }}

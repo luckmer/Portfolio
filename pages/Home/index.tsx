@@ -90,7 +90,7 @@ const Home = () => {
             <div className='w-full flex flex-row gap-16 max-w-440 justify-between items-center'>
               <div className='flex flex-row gap-16'>
                 <Button className='py-16 px-30 bg-fg'>
-                  <Typography text='caption' color={950}>
+                  <Typography text='caption' color='950'>
                     View Projects →
                   </Typography>
                 </Button>
