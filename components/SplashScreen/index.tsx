@@ -68,7 +68,7 @@ const SplashScreen = () => {
         {[0, 1, 2, 3].map((index) => (
           <motion.div
             key={index}
-            className='h-screen w-full bg-text-secondary pointer-events-auto'
+            className='h-screen w-full bg-ink-850 pointer-events-auto'
             variants={childVariants}
             custom={index}
           />
@@ -83,7 +83,7 @@ const SplashScreen = () => {
         {[0, 1, 2, 3].map((index) => (
           <motion.div
             key={index}
-            className='h-screen w-full bg-text-secondary  pointer-events-auto'
+            className='h-screen w-full bg-ink-850  pointer-events-auto'
             variants={childVariants}
             custom={index}
             initial='visible'

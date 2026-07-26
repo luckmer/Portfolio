@@ -15,25 +15,16 @@ export const typography = cva('not-italic select-none', {
       smallBold: 'text-smallText font-bold leading-[14px] tracking-[0.02em]',
       tiny: 'text-[10px] leading-[12px] tracking-[0.02em]',
       tinyBold: 'text-textXs font-bold leading-[12px] tracking-[0.02em]',
+      custom: '',
     },
 
     color: {
-      white: 'text-white',
-      light: 'text-text-light',
-      primary: 'text-text-primary',
-      bone: 'text-background-bone',
-      secondary: 'text-text-secondary',
-      muted: 'text-text-muted',
-      inverse: 'text-text-inverse',
-      onAccent: 'text-text-on-accent',
-      accent: 'text-accent-base',
-      soft: 'text-accent-soft',
-      accentHover: 'text-accent-hover',
-      accentActive: 'text-accent-active',
-      success: 'text-status-success',
-      warning: 'text-status-warning',
-      error: 'text-status-error',
-      info: 'text-status-info',
+      primary: 'text-fg',
+      muted: 'text-fg-muted',
+      accent: 'text-accent',
+      950: 'text-ink-950',
+      900: 'text-ink-900',
+      850: 'text-ink-850',
     },
     ellipsis: {
       true: 'text-ellipsis overflow-hidden whitespace-nowrap',
@@ -47,6 +38,10 @@ export const typography = cva('not-italic select-none', {
     right: {
       true: 'text-right',
     },
+    bold: {
+      true: 'font-bold',
+    },
+
     left: {
       true: 'text-left',
     },
@@ -60,10 +55,7 @@ export const typography = cva('not-italic select-none', {
       true: 'capitalize',
     },
     font: {
-      default: 'font-ubuntu',
-      mono: 'font-mono-dm',
-      playfair: 'font-playfair',
-      jetbrains: 'font-jetbrains-mono',
+      default: 'font-general',
     },
   },
   defaultVariants: {

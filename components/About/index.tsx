@@ -2,29 +2,44 @@ import { Typography } from '@components/Typography'
 
 const About = () => {
   return (
-    <section id='skills' className='px-48 py-24 md:py-32 border-t border-border'>
-      <div className='flex items-baseline gap-4'>
-        <Typography font='mono' text='small' uppercase>
-          [A]
-        </Typography>
-        <Typography font='mono' text='small' uppercase>
-          About
-        </Typography>
-        <span className='flex-1 h-px bg-border' />
+    <section className='py-120 px-8 border-b border-line-800'>
+      <div className='flex flex-row items-start mb-72'>
+        <div className='mr-64'>
+          <Typography text='small' class='pt-12' color='muted'>
+            02
+          </Typography>
+        </div>
+        <div>
+          <Typography text='custom' class='text-[44px]!' bold>
+            About
+          </Typography>
+        </div>
       </div>
-
-      <div className='flex flex-col gap-64 py-128 px-48 max-w-700 '>
-        <Typography text='h2' font='default'>
-          Frontend Engineer with 4+ years of experience building web and mobile products across
-          crypto wallets and trading platforms. Built a multi-chain wallet with 30K+ active users
-          and core-maintain an open-source VR eyetracking project with 1.1K+ GitHub stars.
-        </Typography>
-
-        <Typography text='h2' font='default'>
-          Frontend Engineer with 4+ years of experience building web and mobile products across
-          crypto wallets and trading platforms. Built a multi-chain wallet with 30K+ active users
-          and core-maintain an open-source VR eyetracking project with 1.1K+ GitHub stars.
-        </Typography>
+      <div className='grid grid-cols-[280px_1fr] gap-80'>
+        <div className='sticky top-100 self-start'>
+          <div className='mb-32'>
+            <Typography uppercase text='tiny' color='muted' class='mb-12'>
+              based in
+            </Typography>
+            <Typography text='body'>Cracow, Poland</Typography>
+          </div>
+          <div>
+            <Typography uppercase text='tiny' color='muted' class='mb-12'>
+              available for
+            </Typography>
+            <Typography text='body'>Full time</Typography>
+          </div>
+        </div>
+        <div>
+          <div className='max-w-640'>
+            <Typography text='h1' class='leading-[1.6em]!'>
+              Frontend Engineer with 4+ years of experience building web and mobile products across
+              crypto wallets and trading platforms. Built a multi-chain wallet with 30K+ active
+              users and core-maintain an open-source VR eye-tracking project with 1.1K+ GitHub
+              stars.
+            </Typography>
+          </div>
+        </div>
       </div>
     </section>
   )

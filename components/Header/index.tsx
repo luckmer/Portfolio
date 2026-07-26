@@ -27,29 +27,22 @@ const Header = () => {
       variants={containerVariants}
       initial='hidden'
       animate='visible'
-      className='w-full  h-auto fixed top-0 left-0 pt-[4.9vh] px-24 flex flex-row justify-between z-99 mix-blend-difference'>
-      <Link href='/'>
-        <Typography text='h1' font='playfair' class='text-white'>
-          Luckmer
-        </Typography>
-      </Link>
-
-      <div className='flex flex-row gap-12 items-center justify-center'>
-        <div>
-          <Typography text='caption' class='text-white'>
-            Contact
+      className='fixed top-0 inset-x-0 z-99 border-b border-line-800 bg-ink-950/70 backdrop-blur-md'>
+      <div className='w-full max-w-1360 mx-auto flex flex-row items-center justify-between px-64 h-80'>
+        <Link href='/'>
+          <Typography text='h2' bold>
+            PG.
           </Typography>
+        </Link>
+        <div className='flex flex-row gap-34 items-center justify-center'>
+          <div className='border border-line-800 px-22 py-12 rounded-full'>
+            <Typography text='caption'>{"Let's talk"}</Typography>
+          </div>
+          <button className='flex items-center gap-6 flex-col'>
+            <div className='w-30 min-h-1.5 bg-white' />
+            <div className='w-30 min-h-1.5 bg-white' />
+          </button>
         </div>
-        <div>
-          <Typography text='caption' class='text-white'>
-            Resume
-          </Typography>
-        </div>
-        <button className='flex gap-6 flex-col'>
-          <div className='w-24 h-2 bg-white' />
-          <div className='w-24 h-2 bg-white' />
-          <div className='w-24 h-2 bg-white' />
-        </button>
       </div>
     </motion.nav>
   )

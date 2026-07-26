@@ -70,14 +70,14 @@ const Cursor = () => {
       <div
         ref={outerRef}
         className={clsx(
-          'fixed top-0 border-accent-base left-0 rounded-full border pointer-events-none z-999 w-48 h-48 transition-[width,height,opacity] duration-300 ease-out',
+          'fixed top-0 border-fg-muted left-0 rounded-full border pointer-events-none z-999 w-48 h-48 transition-[width,height,opacity] duration-300 ease-out',
           outerSize,
         )}
       />
       <div
         ref={innerRef}
         className={clsx(
-          'fixed border-accent-base top-0 left-0 rounded-full border pointer-events-none z-999 w-18 h-18 transition-[width,height,opacity] duration-300 ease-out',
+          'fixed border-fg-muted top-0 left-0 rounded-full border pointer-events-none z-999 w-18 h-18 transition-[width,height,opacity] duration-300 ease-out',
           innerSize,
         )}
       />
