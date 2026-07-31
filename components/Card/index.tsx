@@ -13,19 +13,21 @@ export interface IProps {
 
 const Card: FC<IProps> = ({ title, year, description, tags, color }) => {
   return (
-    <div className='border border-line-800 w-full rounded-12 hover:-translate-y-6 duration-300 group flex flex-col h-full'>
+    <div className='@container border border-line-800 w-full rounded-12 hover:-translate-y-6 duration-300 group flex flex-col h-full'>
       <div
         className={clsx(
-          'px-30 py-32 min-h-210 rounded-t-12 flex items-center justify-center',
+          'p-[8cqw] min-h-[max(140px,55cqw)] rounded-t-12 flex items-center justify-center',
           color,
         )}>
-        <Typography text='h1' color='900' bold class='group-hover:scale-105 duration-300'>
+        <Typography
+          text='custom'
+          class='text-[clamp(16px,8.2cqw,30px)] font-semibold leading-[0.96] tracking-[-0.035em] text-nowrap text-line-800'>
           {title}
         </Typography>
       </div>
       <div className='pt-26 px-28 pb-30 flex flex-col flex-1'>
         <div className='flex flex-row items-center justify-between pb-14'>
-          <Typography text='body'>Neony Exchange</Typography>
+          <Typography text='body'>{title}</Typography>
           <Typography text='small' color='muted'>
             {year}
           </Typography>

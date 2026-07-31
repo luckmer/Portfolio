@@ -1,7 +1,8 @@
 'use client'
 import { Typography } from '@components/Typography'
-import { DELAY, HOLD_DURATION } from '@static/index'
-import { motion, type Variants } from 'framer-motion'
+import { childVariants, leftContainerVariants, topContainerVariants } from '@framer/splashScreen'
+import { HOLD_DURATION } from '@static/index'
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 const SplashScreen = () => {
@@ -14,48 +15,6 @@ const SplashScreen = () => {
 
     return () => clearTimeout(timer)
   }, [])
-
-  const topContainerVariants: Variants = {
-    hidden: {},
-    visible: {
-      transition: {
-        delayChildren: DELAY,
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const leftContainerVariants: Variants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const childVariants: Variants = {
-    hidden: {
-      y: '-100%',
-      x: '0%',
-    },
-    visible: {
-      y: '0%',
-      x: '0%',
-      transition: {
-        duration: 0.5,
-        ease: 'easeOut',
-      },
-    },
-    exit: (i: number) => ({
-      x: '100%',
-      transition: {
-        duration: 0.5,
-        delay: i * 0.1,
-        ease: 'easeInOut',
-      },
-    }),
-  }
 
   return (
     <div className='w-full h-screen absolute left-0 top-0 flex flex-row overflow-hidden  pointer-events-none items-center justify-center z-99'>
@@ -91,11 +50,7 @@ const SplashScreen = () => {
           />
         ))}
       </motion.div>
-      {phase !== 'second' ? (
-        <Typography text='h1' font='playfair'>
-          Luckmer
-        </Typography>
-      ) : null}
+      {phase !== 'second' ? <Typography text='h1'>Luckmer</Typography> : null}
     </div>
   )
 }

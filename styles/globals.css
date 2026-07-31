@@ -27,3 +27,17 @@ textarea {
 ::-webkit-scrollbar {
   display: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

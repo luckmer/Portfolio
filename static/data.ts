@@ -56,3 +56,16 @@ export const work = [
     tags: ['Music', 'Discord', 'Typescript', 'Commands'],
   },
 ]
+
+export const tech = [
+  'Typescript',
+  'React',
+  'SolidJS',
+  'JavaScript',
+  'Zustand',
+  'Tauri v2',
+  'TailwindCSS',
+  'Playwright',
+  'Vitest',
+  'Figma',
+]

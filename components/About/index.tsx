@@ -2,9 +2,9 @@ import { Typography } from '@components/Typography'
 
 const About = () => {
   return (
-    <section className='py-120 px-8 border-b border-line-800'>
-      <div className='flex flex-row items-start mb-72'>
-        <div className='mr-64'>
+    <section className='py-120 px-8 border-b border-line-800' id='about'>
+      <div className='flex flex-row items-start mb-72 max-[450px]:flex-col gap-64'>
+        <div>
           <Typography text='small' class='pt-12' color='muted'>
             02
           </Typography>
@@ -15,8 +15,8 @@ const About = () => {
           </Typography>
         </div>
       </div>
-      <div className='grid grid-cols-[280px_1fr] gap-80'>
-        <div className='sticky top-100 self-start'>
+      <div className='grid grid-cols-[280px_1fr] gap-80 max-[900px]:grid-cols-1 max-[900px]:gap-36'>
+        <div className=' top-100 self-start min-[901px]:sticky'>
           <div className='mb-32'>
             <Typography uppercase text='tiny' color='muted' class='mb-12'>
               based in
