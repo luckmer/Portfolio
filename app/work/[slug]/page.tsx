@@ -1,7 +1,7 @@
-import Work from '@pages/Work'
+import WorkSlug from '@pages/WorkSlug'
 
 const WorkRoot = () => {
-  return <Work />
+  return <WorkSlug />
 }
 
 export default WorkRoot
