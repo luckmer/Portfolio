@@ -1,5 +1,5 @@
 import { Typography } from '@components/Typography'
-import { tech } from '@static/data'
+import { TECH } from '@static/data'
 
 const TechStack = () => {
   return (
@@ -20,7 +20,7 @@ const TechStack = () => {
         </div>
       </div>
       <div className='grid grid-cols-5 max-[1100px]:grid-cols-[1fr_1fr_1fr] max-[900px]:grid-cols-[1fr_1fr]'>
-        {tech.map((item, index) => (
+        {TECH.map((item, index) => (
           <div
             key={index}
             className='border border-line-800 py-40 px-32 min-h-172 flex items-start justify-between flex-col hover:bg-line-800 duration-300'>

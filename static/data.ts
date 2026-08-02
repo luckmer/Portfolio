@@ -2,7 +2,7 @@ import EbookNook from '../public/ebookNook.png'
 import Flasher from '../public/Flasher.png'
 import MusicBot from '../public/MusicBot.png'
 
-export const work = [
+export const WORK = [
   {
     id: '01',
     title: 'EyetrackVR',
@@ -57,7 +57,7 @@ export const work = [
   },
 ]
 
-export const tech = [
+export const TECH = [
   'Typescript',
   'React',
   'SolidJS',
@@ -68,4 +68,45 @@ export const tech = [
   'Playwright',
   'Vitest',
   'Figma',
+]
+
+export const INTRO = [
+  {
+    id: 'synthetify',
+    text: 'At Synthetify, I led frontend architecture for a crypto trading platform from greenfield, building the live orderbook, trade history, and charting UI while engineering a WebSocket and REST data layer that preserved full BigInt precision from the Rust backend - no rounding errors in financial calculations. I also built the testing infrastructure (Playwright, Vitest) from scratch.',
+  },
+  {
+    id: 'nightly',
+    text: 'On Nightly Wallet, I helped scale a multi chain crypto wallet to 200k+ downloads and 50k active users, shipping staking, token swaps, and cross chain functionality powered by NEAR Intents, and integrating 10+ blockchain protocols into one interface.',
+  },
+  {
+    id: 'eyetrackvr',
+    text: "Outside of paid work, I core maintain EyeTrackVR, an opensource VR eye tracking ecosystem with 1.1K+ GitHub stars, where I drive UX and frontend architecture decisions for the project's tools.",
+  },
+]
+
+export const EXPERIENCE = [
+  {
+    id: 'synthetify-labs',
+    period: '2022-2026',
+    role: 'Frontend Engineer',
+    place: 'Synthetify Labs · Cracow',
+    description:
+      'Led the frontend of Neony Exchange (live crypto trading) and was a core developer on Nightly Wallet — 200K+ downloads, 50K+ active users.',
+  },
+  {
+    id: 'eyetrackvr',
+    period: '2021 — Present',
+    role: 'Core Maintainer',
+    place: 'EyeTrackVR · Open source',
+    description:
+      'Maintain an open-source VR eye-tracking ecosystem (1.1K+ stars) and led a full rewrite of the Firmware Flashing Tool.',
+  },
+  {
+    id: 'high-school',
+    period: '2017-2020',
+    role: 'High school',
+    place: 'Rybnik, Poland',
+    description: 'General secondary education.',
+  },
 ]

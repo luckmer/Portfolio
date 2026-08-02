@@ -15,7 +15,7 @@ interface IProps {
 const ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'Work', href: '/work' },
-  { label: 'About', href: '/#about' },
+  { label: 'About', href: '/about' },
   { label: 'Stack', href: '/#stack' },
   { label: 'Contact', href: '/#contact' },
 ]
@@ -24,7 +24,7 @@ const HeaderMenu: FC<IProps> = ({ isOpen, onClickClose }) => {
   const animate = useMemo(() => (isOpen ? 'show' : 'hidden'), [isOpen])
 
   return (
-    <div className='pt-80 px-64 pb-64 h-full w-full flex items-end max-w-1360 mx-auto justify-between'>
+    <div className='pt-80 max-[900px]:gap-120 px-64 pb-64 h-full w-full flex items-end max-w-1360 mx-auto max-[900px]:px-20 justify-end max-[900px]:py-32 min-[901px]:justify-between max-[900px]:flex-col max-[900px]:items-start'>
       <motion.div
         className='flex flex-col gap-8'
         variants={container}
@@ -38,7 +38,7 @@ const HeaderMenu: FC<IProps> = ({ isOpen, onClickClose }) => {
                 className='inline-block transition-transform duration-300 hover:translate-x-25 group'>
                 <Typography
                   text='custom'
-                  class='text-[clamp(10px,5.2cqw,80px)] font-semibold leading-[0.96] tracking-[-0.035em] text-nowrap text-fg group-hover:text-accent duration-150'>
+                  class='text-[72px] max-[900px]:text-[48px] font-semibold leading-[0.96] tracking-[-0.035em] text-nowrap text-fg group-hover:text-accent duration-150'>
                   {label}
                 </Typography>
               </Link>
@@ -47,7 +47,7 @@ const HeaderMenu: FC<IProps> = ({ isOpen, onClickClose }) => {
         ))}
       </motion.div>
       <motion.div
-        className='flex flex-col items-end justify-end'
+        className='flex flex-col items-end max-[900px]:items-start justify-end'
         variants={contact}
         initial='hidden'
         animate={animate}>
@@ -61,7 +61,7 @@ const HeaderMenu: FC<IProps> = ({ isOpen, onClickClose }) => {
             <Typography text='body'>piotrsebastiangoik@gmail.com</Typography>
           </Link>
         </div>
-        <div className='flex items-end flex-col gap-8'>
+        <div className='flex items-end flex-col gap-8 max-[900px]:items-start'>
           <Link
             href='https://github.com/luckmer'
             rel='noreferrer'
