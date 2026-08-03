@@ -1,6 +1,6 @@
 'use client'
 
-import Button from '@components/Button'
+import HashLink from '@components/HashLink'
 import { Typography } from '@components/Typography'
 import { contact, container, item } from '@framer/header'
 import { motion } from 'framer-motion'
@@ -32,17 +32,16 @@ const HeaderMenu: FC<IProps> = ({ isOpen, onClickClose }) => {
         animate={animate}>
         {ITEMS.map(({ label, href }) => (
           <motion.div key={label} variants={item}>
-            <Button onClick={() => onClickClose()}>
-              <Link
-                href={href}
-                className='inline-block transition-transform duration-300 hover:translate-x-25 group'>
-                <Typography
-                  text='custom'
-                  class='text-[72px] max-[900px]:text-[48px] font-semibold leading-[0.96] tracking-[-0.035em] text-nowrap text-fg group-hover:text-accent duration-150'>
-                  {label}
-                </Typography>
-              </Link>
-            </Button>
+            <HashLink
+              href={href}
+              onClick={onClickClose}
+              className='inline-block transition-transform duration-300 hover:translate-x-25 group'>
+              <Typography
+                text='custom'
+                class='text-[72px] max-[900px]:text-[48px] font-semibold leading-[0.96] tracking-[-0.035em] text-nowrap text-fg group-hover:text-accent duration-150'>
+                {label}
+              </Typography>
+            </HashLink>
           </motion.div>
         ))}
       </motion.div>

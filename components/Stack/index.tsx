@@ -1,10 +1,13 @@
+import Reveal from '@components/Reveal/Reveal'
+import RevealGroup from '@components/Reveal/RevealGroup'
+import RevealItem from '@components/Reveal/RevealItem'
 import { Typography } from '@components/Typography'
 import { TECH } from '@static/data'
 
 const TechStack = () => {
   return (
-    <div className='py-120 px-8 border-b border-line-800 ' id='stack'>
-      <div className='flex flex-row items-start gap-64 max-[450px]:flex-col'>
+    <section className='py-120 px-8 border-b border-line-800 ' id='stack'>
+      <Reveal className='flex flex-row items-start gap-64 max-[450px]:flex-col'>
         <div>
           <Typography text='small' class='pt-12' color='muted'>
             04
@@ -18,22 +21,24 @@ const TechStack = () => {
             Technologies and tools used on a regular basis.
           </Typography>
         </div>
-      </div>
-      <div className='grid grid-cols-5 max-[1100px]:grid-cols-[1fr_1fr_1fr] max-[900px]:grid-cols-[1fr_1fr]'>
+      </Reveal>
+      <RevealGroup
+        delay={0.1}
+        className='grid grid-cols-5 max-[1100px]:grid-cols-[1fr_1fr_1fr] max-[900px]:grid-cols-[1fr_1fr]'>
         {TECH.map((item, index) => (
-          <div
-            key={index}
-            className='border border-line-800 py-40 px-32 min-h-172 flex items-start justify-between flex-col hover:bg-line-800 duration-300'>
-            <div className='flex flex-row items-center justify-end w-full'>
-              <Typography text='tiny' color='muted'>
-                {index + 1 >= 10 ? index + 1 : `0${index + 1}`}
-              </Typography>
+          <RevealItem key={index} className='h-full'>
+            <div className='h-full border border-line-800 py-40 px-32 min-h-172 flex items-start justify-between flex-col hover:bg-line-800 duration-300'>
+              <div className='flex flex-row items-center justify-end w-full'>
+                <Typography text='tiny' color='muted'>
+                  {index + 1 >= 10 ? index + 1 : `0${index + 1}`}
+                </Typography>
+              </div>
+              <Typography text='caption'>{item}</Typography>
             </div>
-            <Typography text='caption'>{item}</Typography>
-          </div>
+          </RevealItem>
         ))}
-      </div>
-    </div>
+      </RevealGroup>
+    </section>
   )
 }
 

@@ -1,5 +1,6 @@
 import Cursor from '@components/Cursor'
 import Header from '@components/Header'
+import SmoothScroll from '@components/SmoothScroll'
 import SplashScreen from '@components/SplashScreen'
 import '@styles/globals.css'
 import { AnimatePresence } from 'framer-motion'
@@ -29,11 +30,13 @@ export default function RootLayout({
       <body className=' flex flex-col'>
         <SplashScreen />
         <AnimatePresence>
-          <div className='flex flex-col w-full h-full'>
-            <Header />
-            <Cursor />
-            {children}
-          </div>
+          <SmoothScroll>
+            <div className='flex flex-col w-full h-full'>
+              <Header />
+              <Cursor />
+              {children}
+            </div>
+          </SmoothScroll>
         </AnimatePresence>
       </body>
     </html>

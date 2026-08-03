@@ -3,9 +3,13 @@ import NotFound from '@components/NotFound'
 import WorkSlug from '@pages/WorkSlug'
 import { WORK_MAP } from '@static/data'
 import { useParams } from 'next/navigation'
-import { useMemo } from 'react'
+import { useLayoutEffect, useMemo } from 'react'
 
 const WorkRoot = () => {
+  useLayoutEffect(() => {
+    window.scrollTo({ behavior: 'instant', top: 0 })
+  }, [])
+
   const data = useParams<{ slug: string }>()
   const slug = data?.slug
 

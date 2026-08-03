@@ -28,8 +28,19 @@ textarea {
   display: none;
 }
 
-html {
+html:not(.lenis) {
   scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+html.lenis-stopped,
+html.lenis-stopped body {
+  overflow: hidden;
+  touch-action: none;
 }
 
 section[id] {
@@ -37,7 +48,7 @@ section[id] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  html:not(.lenis) {
     scroll-behavior: auto;
   }
 }

@@ -1,10 +1,11 @@
+import Reveal from '@components/Reveal/Reveal'
 import { Typography } from '@components/Typography'
 import Link from 'next/link'
 
 const SelectedWork = () => {
   return (
     <section className='py-120 px-8' id='contact'>
-      <div className='flex flex-row items-start gap-64 max-[450px]:flex-col'>
+      <Reveal className='flex flex-row items-start gap-64 max-[450px]:flex-col'>
         <div>
           <Typography text='small' class='pt-12' color='muted'>
             05
@@ -15,8 +16,8 @@ const SelectedWork = () => {
             Contact
           </Typography>
         </div>
-      </div>
-      <div className='pb-64'>
+      </Reveal>
+      <Reveal delay={0.1} className='pb-64'>
         <Typography
           text='custom'
           class='text-[clamp(10px,5.2cqw,60px)] font-semibold leading-[0.96] tracking-[-0.035em] text-nowrap text-fg mb-56'>
@@ -27,8 +28,8 @@ const SelectedWork = () => {
         <Typography text='body' class='max-w-420 leading-[1.6]!' color='muted'>
           Open to new opportunities and interesting projects. The fastest way to reach me is email.
         </Typography>
-      </div>
-      <div>
+      </Reveal>
+      <Reveal delay={0.2}>
         <div>
           <div className='pb-8'>
             <Typography uppercase color='muted' text='small' class='tracking-[0.2em]!'>
@@ -74,7 +75,7 @@ const SelectedWork = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }
