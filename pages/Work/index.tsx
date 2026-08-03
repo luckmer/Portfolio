@@ -25,6 +25,7 @@ const Work = () => {
             <div className='grid grid-cols-[1fr_1fr_1fr] gap-24 max-[1100px]:grid-cols-[1fr_1fr] max-[900px]:grid-cols-[1fr] pt-80 pb-60 px-8'>
               {WORK.map((el) => (
                 <Card
+                  href={`/work/${el.id}`}
                   key={el.id}
                   tags={el.tags}
                   title={el.title}

@@ -1,3 +1,4 @@
+'use client'
 import Work from '@pages/Work'
 
 const WorkRoot = () => {

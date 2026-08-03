@@ -30,6 +30,7 @@ const SelectedWork = () => {
           <Card
             key={el.id}
             tags={el.tags}
+            href={`/work/${el.id}`}
             title={el.title}
             year={el.year}
             description={el.description}

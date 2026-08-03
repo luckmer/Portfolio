@@ -1,6 +1,12 @@
-import EbookNook from '../public/ebookNook.png'
-import Flasher from '../public/Flasher.png'
-import MusicBot from '../public/MusicBot.png'
+import EbookNookImg1 from '../public/EBookNook/image1.png'
+import EbookNookImg2 from '../public/EBookNook/image2.png'
+import EbookNookImg3 from '../public/EBookNook/image3.png'
+import FlasherImg1 from '../public/FirmwareFlashingTool/image1.png'
+import FlasherImg2 from '../public/FirmwareFlashingTool/image2.png'
+import FlasherImg3 from '../public/FirmwareFlashingTool/image3.png'
+import MusicBotImg1 from '../public/MusicBot/image1.png'
+import MusicBotImg2 from '../public/MusicBot/image2.png'
+import MusicBotImg3 from '../public/MusicBot/image3.png'
 
 export const WORK = [
   {
@@ -21,7 +27,11 @@ export const WORK = [
     role: 'Frontend Engineer',
     description:
       'Complete rewrite of the ETVR firmware flashing tool (22+ stars) — flashing made accessible without a command line.',
-    image: Flasher,
+    images: {
+      image1: FlasherImg1,
+      image2: FlasherImg2,
+      image3: FlasherImg3,
+    },
     tags: ['SolidJS', 'Tauri V2', 'Rust', 'ESP', 'tailwindcss', 'UI/UX'],
   },
   {
@@ -32,7 +42,11 @@ export const WORK = [
     role: 'Solo Project',
     description:
       'Desktop ebook reader with a custom UI/UX, built to close usability gaps in existing tools.',
-    image: EbookNook,
+    images: {
+      image1: EbookNookImg1,
+      image2: EbookNookImg2,
+      image3: EbookNookImg3,
+    },
     tags: [
       'Tauri v2',
       'Typescript',
@@ -52,10 +66,22 @@ export const WORK = [
     color: 'bg-[#c9bde0]',
     role: 'Solo Project',
     description: 'A music bot for Discord, built as a fun side project.',
-    image: MusicBot,
+    images: {
+      image1: MusicBotImg1,
+      image2: MusicBotImg2,
+      image3: MusicBotImg3,
+    },
     tags: ['Music', 'Discord', 'Typescript', 'Commands'],
   },
 ]
+
+export const WORK_MAP = WORK.reduce(
+  (acc, el) => {
+    acc[el.id] = el
+    return acc
+  },
+  {} as Record<string, (typeof WORK)[number]>,
+)
 
 export const TECH = [
   'Typescript',

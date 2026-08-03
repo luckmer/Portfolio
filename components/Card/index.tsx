@@ -1,9 +1,11 @@
-import Button from '@components/Button'
 import { Typography } from '@components/Typography'
 import clsx from 'clsx'
+import Link from 'next/link'
 import { FC } from 'react'
 
 export interface IProps {
+  href: string
+  repo?: string
   year: string
   title: string
   description: string
@@ -11,9 +13,14 @@ export interface IProps {
   tags: string[]
 }
 
-const Card: FC<IProps> = ({ title, year, description, tags, color }) => {
+const Card: FC<IProps> = ({ href, repo, title, year, description, tags, color }) => {
   return (
-    <div className='@container border border-line-800 w-full rounded-12 hover:-translate-y-6 duration-300 group flex flex-col h-full'>
+    <div className='@container relative border border-line-800 w-full rounded-12 hover:-translate-y-6 duration-300 group flex flex-col h-full'>
+      <Link
+        href={href}
+        aria-label={title}
+        className='absolute inset-0 z-10 rounded-12 focus-visible:outline-2 focus-visible:outline-accent'
+      />
       <div
         className={clsx(
           'p-[8cqw] min-h-[max(140px,55cqw)] rounded-t-12 flex items-center justify-center',
@@ -44,12 +51,12 @@ const Card: FC<IProps> = ({ title, year, description, tags, color }) => {
             </div>
           ))}
         </div>
-        <div className='mt-auto'>
-          <Button>
+        <div className='mt-auto relative z-20 w-fit'>
+          <a href={repo} target='_blank' rel='noreferrer noopener'>
             <Typography color='muted' text='caption' class='hover:text-white! cursor-pointer'>
               Code ↗
             </Typography>
-          </Button>
+          </a>
         </div>
       </div>
     </div>
