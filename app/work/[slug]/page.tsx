@@ -25,6 +25,7 @@ const WorkRoot = () => {
       year={content.year}
       role={content.role}
       description={content.description}
+      content={content.content}
       images={content.images}
       tags={content.tags}
     />

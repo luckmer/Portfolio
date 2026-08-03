@@ -15,10 +15,11 @@ export interface IProps {
   role: string
   description: string
   images?: Record<string, StaticImageData>
+  content: Record<string, string>
   tags: string[]
 }
 
-const WorkSlug: FC<IProps> = ({ title, year, role, description, images, tags }) => {
+const WorkSlug: FC<IProps> = ({ title, year, role, description, images, tags, content }) => {
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.2, smoothWheel: true }}>
       <div className='w-full flex flex-col select-none'>
@@ -109,10 +110,25 @@ const WorkSlug: FC<IProps> = ({ title, year, role, description, images, tags }) 
                   </Link>
                 </div>
               </div>
-              <div>
-                <Typography text='small' uppercase color='muted' class='tracking-[0.22em]'>
-                  overview
-                </Typography>
+              <div className='max-w-600 mx-auto'>
+                <div className='mb-28'>
+                  <Typography text='small' uppercase color='muted' class='tracking-[0.22em]'>
+                    overview
+                  </Typography>
+                </div>
+                <div className='mb-24'>
+                  <Typography text='h1'>{content.main}</Typography>
+                </div>
+                <div className='mb-24'>
+                  <Typography text='body' color='muted'>
+                    {content.content1}
+                  </Typography>
+                </div>
+                <div className='mb-24'>
+                  <Typography text='body' color='muted'>
+                    {content.content2}
+                  </Typography>
+                </div>
               </div>
             </div>
           </section>
