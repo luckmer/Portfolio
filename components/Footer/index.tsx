@@ -85,8 +85,8 @@ const Footer = () => {
                 </Typography>
               </div>
             </Link>
-            <a
-              href='/resume.pdf'
+            <Link
+              href='/resume/Piotr_Goik_Frontend_Engineer.pdf'
               download
               className='group relative  border-t border-line-800 pt-20 flex flex-row justify-between'>
               <div>
@@ -102,7 +102,7 @@ const Footer = () => {
                   ↗
                 </Typography>
               </div>
-            </a>
+            </Link>
           </RevealItem>
         </RevealGroup>
         <Reveal className='@container relative overflow-hidden'>

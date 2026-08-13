@@ -52,11 +52,11 @@ const Card: FC<IProps> = ({ href, repo, title, year, description, tags, color })
           ))}
         </div>
         <div className='mt-auto relative z-20 w-fit'>
-          <a href={repo} target='_blank' rel='noreferrer noopener'>
+          <Link href={repo ?? ''} target='_blank' rel='noreferrer noopener'>
             <Typography color='muted' text='caption' class='hover:text-white! cursor-pointer'>
               Code ↗
             </Typography>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
