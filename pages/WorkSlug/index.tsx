@@ -1,3 +1,4 @@
+'use client'
 import EmptyImg from '@components/EmptyImg'
 import Footer from '@components/Footer'
 import Reveal from '@components/Reveal/Reveal'
@@ -71,7 +72,7 @@ const WorkSlug: FC<IProps> = ({ title, year, role, description, images, tags, co
           </Reveal>
         </section>
         <section className='py-60 px-8 border-b border-line-800'>
-          <div className='grid grid-cols-[300px_1fr] gap-80'>
+          <div className='grid grid-cols-[300px_1fr] gap-80 max-[900px]:grid-cols-1'>
             <Reveal className='flex flex-col gap-36'>
               <div className='flex flex-col gap-12'>
                 <Typography text='small' uppercase color='muted' class='tracking-[0.22em]'>
@@ -99,7 +100,7 @@ const WorkSlug: FC<IProps> = ({ title, year, role, description, images, tags, co
                   ))}
                 </div>
               </div>
-              <div className='mt-auto border-t border-line-800 pt-28'>
+              <div className='mt-auto border-t border-line-800 pt-28 min-[901px]:visible hidden'>
                 <Link href='/'>
                   <Typography color='muted' text='caption' class='hover:text-white! cursor-pointer'>
                     Code ↗
@@ -127,6 +128,13 @@ const WorkSlug: FC<IProps> = ({ title, year, role, description, images, tags, co
                 </Typography>
               </RevealItem>
             </RevealGroup>
+            <div className='mt-auto border-t border-line-800 pt-28 visible min-[901px]:hidden'>
+              <Link href='/'>
+                <Typography color='muted' text='caption' class='hover:text-white! cursor-pointer'>
+                  Code ↗
+                </Typography>
+              </Link>
+            </div>
           </div>
         </section>
         <section className='py-60 px-8'>
@@ -135,7 +143,9 @@ const WorkSlug: FC<IProps> = ({ title, year, role, description, images, tags, co
               Gallery
             </Typography>
           </Reveal>
-          <RevealGroup delay={0.1} className='grid grid-cols-[1fr_1fr] gap-24'>
+          <RevealGroup
+            delay={0.1}
+            className='grid grid-cols-[1fr_1fr] gap-24 max-[900px]:grid-cols-1'>
             <RevealItem className='relative w-full aspect-video overflow-hidden border border-line-800'>
               {images?.image3 ? (
                 <Image
