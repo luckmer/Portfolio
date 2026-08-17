@@ -29,6 +29,7 @@ const WorkSlug: FC<IProps> = ({
   images = {},
   tags = [],
   content = {
+    link: '/',
     main: '--',
     content1: '--',
     content2: '--',
@@ -112,13 +113,6 @@ const WorkSlug: FC<IProps> = ({
                   ))}
                 </div>
               </div>
-              <div className='mt-auto border-t border-line-800 pt-28 min-[901px]:visible hidden'>
-                <Link href='/'>
-                  <Typography color='muted' text='caption' class='hover:text-white! cursor-pointer'>
-                    Code ↗
-                  </Typography>
-                </Link>
-              </div>
             </Reveal>
             <RevealGroup delay={0.1} className='max-w-600 mx-auto'>
               <RevealItem className='mb-28'>
@@ -140,8 +134,8 @@ const WorkSlug: FC<IProps> = ({
                 </Typography>
               </RevealItem>
             </RevealGroup>
-            <div className='mt-auto border-t border-line-800 pt-28 visible min-[901px]:hidden'>
-              <Link href='/'>
+            <div className='mt-auto border-t border-line-800 pt-28 visible'>
+              <Link href={content.link}>
                 <Typography color='muted' text='caption' class='hover:text-white! cursor-pointer'>
                   Code ↗
                 </Typography>

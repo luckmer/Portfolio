@@ -18,6 +18,7 @@ export const WORK = [
     description:
       "Core maintainer of an open-source VR eye-tracking ecosystem with 1.1K+ GitHub stars, driving design, UX, and frontend architecture decisions across the project's core tools",
     content: {
+      link: 'https://github.com/EyeTrackVR',
       main: 'An opensource VR eye tracking project.',
       content1: 'I contribute to the project by working on the FirmwareFlashingTool.',
       content2: 'It has grown into a community project with over 1.1K GitHub stars.',
@@ -38,6 +39,7 @@ export const WORK = [
       image3: FlasherImg3,
     },
     content: {
+      link: 'https://github.com/EyeTrackVR/FirmwareFlashingTool',
       main: 'A desktop application for flashing EyeTrackVR firmware.',
       content1: 'Designed to make firmware updates simple without relying on command line tools.',
       content2:
@@ -59,6 +61,7 @@ export const WORK = [
       image3: EbookNookImg3,
     },
     content: {
+      link: 'https://github.com/luckmer/EbookNook',
       main: 'A desktop ebook reader I built as a personal project.',
       content1: "I created it because I wasn't happy with the ebook readers I had been using.",
       content2: 'It focuses on a simple interface and a comfortable reading experience.',
@@ -88,6 +91,7 @@ export const WORK = [
       image3: MusicBotImg3,
     },
     content: {
+      link: 'https://github.com/luckmer/ChunkyBot',
       main: 'A small Discord music bot I built for fun.',
       content1:
         'It supports queue management, playback controls, and an easy to extend command structure.',
