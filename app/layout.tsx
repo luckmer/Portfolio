@@ -15,26 +15,28 @@ const generalSans = localFont({
   display: 'swap',
 })
 
+const basePath = process.env.PAGES_BASE_PATH ?? ''
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://luckmer.github.io'),
   title: 'Piotr Goik',
   description: 'Frontend Engineer & opensource contributor',
   icons: {
-    icon: '/metadata/background.png',
+    icon: `${basePath}/metadata/background.png`,
   },
   openGraph: {
     title: 'Piotr Goik',
     description: 'Frontend Engineer & opensource contributor',
-    url: 'https://luckmer.github.io/Portfolio/',
+    url: `https://luckmer.github.io${basePath}/`,
     siteName: 'Piotr Goik',
-    images: [{ url: '/metadata/background.png' }],
+    images: [{ url: `${basePath}/metadata/background.png` }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Piotr Goik',
     description: 'Frontend Engineer & opensource contributor',
-    images: ['/metadata/background.png'],
+    images: [`${basePath}/metadata/background.png`],
   },
 }
 
