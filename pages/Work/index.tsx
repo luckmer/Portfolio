@@ -27,6 +27,7 @@ const Work = () => {
                 <Card
                   href={`/work/${el.id}`}
                   tags={el.tags}
+                  repo={el.content.link}
                   title={el.title}
                   year={el.year}
                   description={el.description}

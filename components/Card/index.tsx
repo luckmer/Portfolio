@@ -5,7 +5,7 @@ import { FC } from 'react'
 
 export interface IProps {
   href: string
-  repo?: string
+  repo: string
   year: string
   title: string
   description: string

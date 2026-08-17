@@ -37,6 +37,7 @@ const SelectedWork = () => {
               tags={el.tags}
               href={`/work/${el.id}`}
               title={el.title}
+              repo={el.content.link}
               year={el.year}
               description={el.description}
               color={el.color}
