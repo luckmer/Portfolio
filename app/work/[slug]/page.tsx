@@ -1,28 +1,21 @@
-'use client'
 import NotFound from '@components/NotFound'
-import WorkSlug from '@pages/WorkSlug'
 import { WORK_MAP } from '@static/data'
-import { useParams } from 'next/navigation'
-import { useLayoutEffect, useMemo } from 'react'
+import WorkSlugRoot from '.'
 
-const WorkRoot = () => {
-  useLayoutEffect(() => {
-    window.scrollTo({ behavior: 'instant', top: 0 })
-  }, [])
+export function generateStaticParams() {
+  return Object.keys(WORK_MAP).map((slug) => ({ slug }))
+}
 
-  const data = useParams<{ slug: string }>()
-  const slug = data?.slug
+const WorkSlug = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params
+  const content = WORK_MAP[slug]
 
-  const content = useMemo(() => {
-    return WORK_MAP[slug ?? '-1']
-  }, [slug])
-
-  if (!slug || !content) {
+  if (!content) {
     return <NotFound />
   }
 
   return (
-    <WorkSlug
+    <WorkSlugRoot
       id={content.id}
       color={content.color}
       title={content.title}
@@ -36,4 +29,4 @@ const WorkRoot = () => {
   )
 }
 
-export default WorkRoot
+export default WorkSlug

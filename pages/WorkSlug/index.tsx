@@ -21,7 +21,19 @@ export interface IProps {
   tags: string[]
 }
 
-const WorkSlug: FC<IProps> = ({ title, year, role, description, images, tags, content }) => {
+const WorkSlug: FC<IProps> = ({
+  title = '--',
+  year = '--',
+  role = '--',
+  description = '--',
+  images = {},
+  tags = [],
+  content = {
+    main: '--',
+    content1: '--',
+    content2: '--',
+  },
+}) => {
   return (
     <div className='w-full flex flex-col select-none'>
       <div className='max-w-1360 mx-auto px-64 flex flex-col w-full h-auto border-r border-l border-line-800 max-[900px]:px-24'>
@@ -91,7 +103,7 @@ const WorkSlug: FC<IProps> = ({ title, year, role, description, images, tags, co
                   stack
                 </Typography>
                 <div className='flex flex-wrap gap-8 pb-22'>
-                  {tags.map((skill) => (
+                  {(tags?.length ? tags : []).map((skill) => (
                     <div key={skill} className='border border-line-800 rounded-full py-5 px-13'>
                       <Typography text='small' class='leading-[1.6]!' color='muted'>
                         {skill}
