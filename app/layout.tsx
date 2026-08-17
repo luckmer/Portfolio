@@ -16,10 +16,25 @@ const generalSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Portfolio',
+  metadataBase: new URL('https://luckmer.github.io'),
+  title: 'Piotr Goik',
+  description: 'Frontend Engineer & opensource contributor',
   icons: {
     icon: '/metadata/background.png',
+  },
+  openGraph: {
+    title: 'Piotr Goik',
+    description: 'Frontend Engineer & opensource contributor',
+    url: 'https://luckmer.github.io/Portfolio/',
+    siteName: 'Piotr Goik',
+    images: [{ url: '/metadata/background.png' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Piotr Goik',
+    description: 'Frontend Engineer & opensource contributor',
+    images: ['/metadata/background.png'],
   },
 }
 
