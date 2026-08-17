@@ -18,6 +18,9 @@ const generalSans = localFont({
 export const metadata: Metadata = {
   title: 'Portfolio',
   description: 'Portfolio',
+  icons: {
+    icon: '/metadata/background.png',
+  },
 }
 
 export default function RootLayout({
