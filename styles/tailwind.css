@@ -15,9 +15,7 @@
 
   --font-general: var(--font-general-sans), system-ui, sans-serif;
   --animate-glitch: glitch-x 2.6s steps(2, end) infinite;
-
   --spacing: 1px;
-
   --text-h1: 1.5rem;
   --text-h2: 1.375rem;
   --text-h3: 1.25rem;
