@@ -36,16 +36,18 @@ const SelectedWork = () => {
               email
             </Typography>
           </div>
-          <Link
-            href='mailto:piotrsebastiangoik@gmail.com'
-            className='flex cursor-pointer text-[clamp(10px,10.2cqw,34px)] '>
-            <Typography
-              text='custom'
-              color='muted'
-              class='text-[clamp(10px,5.2cqw,34px)] border-b border-line-800 pb-8 leading-[0.96] tracking-[-0.01em] text-nowrap hover:text-fg mb-56'>
-              piotrsebastiangoik@gmail.com
-            </Typography>
-          </Link>
+          <div className='flex mb-56'>
+            <Link
+              href='mailto:piotrsebastiangoik@gmail.com'
+              className='flex cursor-pointer text-[clamp(10px,10.2cqw,34px)] '>
+              <Typography
+                text='custom'
+                color='muted'
+                class='text-[clamp(10px,5.2cqw,34px)] border-b border-line-800 pb-8 leading-[0.96] tracking-[-0.01em] text-nowrap hover:text-fg'>
+                piotrsebastiangoik@gmail.com
+              </Typography>
+            </Link>
+          </div>
           <div className='flex flex-row gap-32 max-[600px]:flex-col max-[600px]:gap-64'>
             <div className='flex flex-col gap-8'>
               <Typography uppercase color='muted' text='small' class='tracking-[0.2em]!'>

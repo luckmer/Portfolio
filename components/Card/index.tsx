@@ -28,7 +28,7 @@ const Card: FC<IProps> = ({ href, repo, title, year, description, tags, color })
         )}>
         <Typography
           text='custom'
-          class='text-[clamp(16px,8.2cqw,30px)] font-semibold leading-[0.96] tracking-[-0.035em] text-nowrap text-line-800'>
+          class='text-[clamp(16px,8.2cqw,30px)] font-semibold leading-[0.96] tracking-[-0.035em] text-nowrap text-line-800 group-hover:scale-[1.02] duration-300'>
           {title}
         </Typography>
       </div>

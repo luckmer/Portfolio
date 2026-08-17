@@ -1,7 +1,5 @@
-import { DELAY_CHILDREN, DURATION, EASE, STAGGER } from '@static/index'
+import { DELAY_CHILDREN, DURATION, EASE, ITEMS, STAGGER } from '@static/index'
 import { Variants } from 'framer-motion'
-
-const ITEMS = 5
 
 export const container: Variants = {
   hidden: {},
@@ -22,23 +20,6 @@ export const contact: Variants = {
       duration: DURATION,
       ease: EASE,
       delay: DELAY_CHILDREN + STAGGER * (ITEMS - 1),
-    },
-  },
-}
-export const containerVariants: Variants = {
-  hidden: {
-    y: '-50%',
-    x: '0%',
-    opacity: 0,
-  },
-  visible: {
-    y: '0%',
-    x: '0%',
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: 'easeOut',
-      delay: 2.2,
     },
   },
 }

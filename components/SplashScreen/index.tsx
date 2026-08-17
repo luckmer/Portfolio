@@ -31,9 +31,9 @@ const SplashScreen = () => {
   }, [lenis])
 
   return (
-    <div className='w-full h-screen absolute left-0 top-0 flex flex-row overflow-hidden  pointer-events-none items-center justify-center z-99'>
+    <div className='w-full h-screen fixed left-0 top-0 flex flex-row overflow-hidden  pointer-events-none items-center justify-center z-99'>
       <motion.div
-        className='w-full h-screen absolute left-0 top-0 flex flex-row overflow-hidden z-99 pointer-events-none'
+        className='w-full h-screen fixed left-0 top-0 flex flex-row overflow-hidden z-99 pointer-events-none'
         style={{ display: phase === 'first' ? 'flex' : 'none' }}
         variants={topContainerVariants}
         initial='hidden'
@@ -48,7 +48,7 @@ const SplashScreen = () => {
         ))}
       </motion.div>
       <motion.div
-        className='w-full h-screen absolute left-0 top-0 flex flex-col overflow-hidden z-99 pointer-events-none'
+        className='w-full h-screen fixed left-0 top-0 flex flex-col overflow-hidden z-99 pointer-events-none'
         style={{ display: phase === 'second' ? 'flex' : 'none' }}
         variants={leftContainerVariants}
         initial='visible'

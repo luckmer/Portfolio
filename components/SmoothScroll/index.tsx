@@ -16,6 +16,12 @@ const SmoothScroll: FC<IProps> = ({ children }) => {
   const navigated = useRef(false)
 
   useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+  }, [])
+
+  useEffect(() => {
     if (!lenis) return
 
     const run = () => {
