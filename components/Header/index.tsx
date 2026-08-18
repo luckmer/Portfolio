@@ -12,6 +12,9 @@ const Header = () => {
     <nav className='fixed top-0 inset-x-0 z-98 border-b border-line-800 bg-ink-950/70 backdrop-blur-md'>
       <HeaderContext
         open={open}
+        onClickCloseMenu={() => {
+          setOpen(false)
+        }}
         onClick={() => {
           setOpen((prev) => !prev)
         }}

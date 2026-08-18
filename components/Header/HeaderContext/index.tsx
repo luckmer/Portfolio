@@ -10,9 +10,10 @@ import { FC } from 'react'
 export interface IProps {
   open: boolean
   onClick: () => void
+  onClickCloseMenu: () => void
 }
 
-const HeaderContext: FC<IProps> = ({ open, onClick }) => {
+const HeaderContext: FC<IProps> = ({ open, onClick, onClickCloseMenu }) => {
   return (
     <div className='w-full max-w-1360 mx-auto flex flex-row items-center justify-between px-64 h-80'>
       <Link href='/' className=' flex flex-row gap-24 items-center justify-center'>
@@ -22,7 +23,7 @@ const HeaderContext: FC<IProps> = ({ open, onClick }) => {
         </Typography>
       </Link>
       <div className='flex flex-row gap-34 items-center justify-center'>
-        <Button className='flex flex-row items-center justify-center' onClick={onClick}>
+        <Button className='flex flex-row items-center justify-center' onClick={onClickCloseMenu}>
           <HashLink
             href='/#contact'
             className='border border-line-800 px-22 py-12 rounded-full hover:border-fg duration-300 max-[900px]:hidden'>
