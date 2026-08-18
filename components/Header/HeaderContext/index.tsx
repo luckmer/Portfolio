@@ -22,11 +22,13 @@ const HeaderContext: FC<IProps> = ({ open, onClick }) => {
         </Typography>
       </Link>
       <div className='flex flex-row gap-34 items-center justify-center'>
-        <HashLink
-          href='/#contact'
-          className='border border-line-800 px-22 py-12 rounded-full hover:border-fg duration-300 max-[900px]:hidden'>
-          <Typography text='caption'>{"Let's talk"}</Typography>
-        </HashLink>
+        <Button className='flex flex-row items-center justify-center' onClick={onClick}>
+          <HashLink
+            href='/#contact'
+            className='border border-line-800 px-22 py-12 rounded-full hover:border-fg duration-300 max-[900px]:hidden'>
+            <Typography text='caption'>{"Let's talk"}</Typography>
+          </HashLink>
+        </Button>
         <Button className='relative flex h-14 w-30 items-center justify-center' onClick={onClick}>
           <div
             className={clsx(

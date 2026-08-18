@@ -5,6 +5,7 @@ import Reveal from '@components/Reveal/Reveal'
 import RevealGroup from '@components/Reveal/RevealGroup'
 import RevealItem from '@components/Reveal/RevealItem'
 import { Typography } from '@components/Typography'
+import clsx from 'clsx'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -70,7 +71,11 @@ const WorkSlug: FC<IProps> = ({
           </Reveal>
         </section>
         <section className='py-60 px-8 border-b border-line-800'>
-          <Reveal className='relative w-full aspect-video overflow-hidden border border-line-800'>
+          <Reveal
+            className={clsx(
+              'relative w-full aspect-video overflow-hidden',
+              !images?.image1 && 'border border-line-800',
+            )}>
             {images?.image1 ? (
               <Image
                 src={images?.image1 ?? ''}
@@ -152,7 +157,11 @@ const WorkSlug: FC<IProps> = ({
           <RevealGroup
             delay={0.1}
             className='grid grid-cols-[1fr_1fr] gap-24 max-[900px]:grid-cols-1'>
-            <RevealItem className='relative w-full aspect-video overflow-hidden border border-line-800'>
+            <RevealItem
+              className={clsx(
+                'relative w-full aspect-video overflow-hidden',
+                !images?.image3 && 'border border-line-800',
+              )}>
               {images?.image3 ? (
                 <Image
                   src={images?.image3 ?? ''}
@@ -165,7 +174,11 @@ const WorkSlug: FC<IProps> = ({
                 <EmptyImg />
               )}
             </RevealItem>
-            <RevealItem className='relative w-full aspect-video overflow-hidden border border-line-800'>
+            <RevealItem
+              className={clsx(
+                'relative w-full aspect-video overflow-hidden',
+                !images?.image2 && 'border border-line-800',
+              )}>
               {images?.image2 ? (
                 <Image
                   src={images?.image2 ?? ''}
@@ -178,7 +191,11 @@ const WorkSlug: FC<IProps> = ({
                 <EmptyImg />
               )}
             </RevealItem>
-            <RevealItem className='relative w-full col-span-full aspect-video overflow-hidden border border-line-800 '>
+            <RevealItem
+              className={clsx(
+                'relative w-full col-span-full aspect-video overflow-hidden',
+                !images?.image1 && 'border border-line-800',
+              )}>
               {images?.image1 ? (
                 <Image
                   src={images?.image1 ?? ''}
