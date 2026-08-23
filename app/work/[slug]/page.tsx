@@ -17,6 +17,7 @@ const WorkSlug = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <WorkSlugRoot
       id={content.id}
+      isMobile={content.isMobile}
       color={content.color}
       title={content.title}
       year={content.year}

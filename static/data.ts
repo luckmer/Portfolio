@@ -7,6 +7,9 @@ import FlasherImg3 from '../public/FirmwareFlashingTool/image3.png'
 import MusicBotImg1 from '../public/MusicBot/image1.png'
 import MusicBotImg2 from '../public/MusicBot/image2.png'
 import MusicBotImg3 from '../public/MusicBot/image3.png'
+import WordlyImg1 from '../public/wordly/image1.png'
+import WordlyImg2 from '../public/wordly/image2.png'
+import WordlyImg3 from '../public/wordly/image3.png'
 
 export const WORK = [
   {
@@ -75,6 +78,14 @@ export const WORK = [
       'vitest',
       'biome',
       'redux',
+      'foliate',
+      'fonts',
+      'playwright',
+      'rtl',
+      'redux saga',
+      'redux toolkit',
+      'react router',
+      'ant design',
       'tailwindcss',
     ],
   },
@@ -98,6 +109,38 @@ export const WORK = [
       content2: 'Built from scratch as a way to experiment with Discord APIs and bot development.',
     },
     tags: ['Music', 'Discord', 'Typescript', 'Commands'],
+  },
+  {
+    id: '05',
+    title: 'Wordly',
+    year: '2026',
+    color: 'bg-[#a9c9dd]',
+    role: 'Solo Project',
+    isMobile: true,
+    description: 'A friendly clone of the well known Wordle game.',
+    images: {
+      image1: WordlyImg1,
+      image2: WordlyImg2,
+      image3: WordlyImg3,
+    },
+    content: {
+      link: 'https://github.com/luckmer/wordly',
+      main: 'A mobile word guessing game inspired by Wordle.',
+      content1:
+        "I didn't have any React Native project of my own yet, so I picked Wordle as a fun excuse to build one.",
+      content2:
+        'Includes custom fonts, a splash screen, and full color feedback on the keyboard as you guess.',
+    },
+    tags: [
+      'React Native',
+      'Expo',
+      'NativeWind',
+      'Zustand',
+      'Reanimated',
+      'Typescript',
+      'tailwindcss',
+      'immer',
+    ],
   },
 ]
 

@@ -13,6 +13,7 @@ export interface IProps {
   images?: Record<string, StaticImageData>
   content: Record<string, string>
   tags: string[]
+  isMobile?: boolean
 }
 
 const WorkSlugRoot: FC<IProps> = (content) => {
@@ -22,6 +23,7 @@ const WorkSlugRoot: FC<IProps> = (content) => {
 
   return (
     <WorkSlug
+      isMobile={content.isMobile}
       id={content.id}
       color={content.color}
       title={content.title}

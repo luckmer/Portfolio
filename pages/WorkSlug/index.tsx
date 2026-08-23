@@ -19,10 +19,12 @@ export interface IProps {
   description: string
   images?: Record<string, StaticImageData>
   content: Record<string, string>
+  isMobile?: boolean
   tags: string[]
 }
 
 const WorkSlug: FC<IProps> = ({
+  isMobile = false,
   title = '--',
   year = '--',
   role = '--',
@@ -73,7 +75,10 @@ const WorkSlug: FC<IProps> = ({
         <section className='py-60 px-8 border-b border-line-800'>
           <Reveal
             className={clsx(
-              'relative w-full aspect-video overflow-hidden',
+              isMobile
+                ? 'aspect-10/7  max-[900px]:aspect-9/10 max-[500px]:aspect-6/10'
+                : 'aspect-video',
+              'relative w-full  overflow-hidden',
               !images?.image1 && 'border border-line-800',
             )}>
             {images?.image1 ? (
@@ -81,7 +86,7 @@ const WorkSlug: FC<IProps> = ({
                 src={images?.image1 ?? ''}
                 alt='flasher'
                 fill
-                className='object-cover'
+                className='object-contain'
                 priority
               />
             ) : (
@@ -156,27 +161,37 @@ const WorkSlug: FC<IProps> = ({
           </Reveal>
           <RevealGroup
             delay={0.1}
-            className='grid grid-cols-[1fr_1fr] gap-24 max-[900px]:grid-cols-1'>
-            <RevealItem
+            className={
+              isMobile
+                ? 'flex gap-12 max-[900px]:flex-col'
+                : 'grid grid-cols-[1fr_1fr] gap-24 max-[900px]:grid-cols-1'
+            }>
+            <Reveal
               className={clsx(
-                'relative w-full aspect-video overflow-hidden',
-                !images?.image3 && 'border border-line-800',
+                isMobile
+                  ? 'aspect-7/16 max-[900px]:aspect-9/10 max-[500px]:aspect-6/10'
+                  : 'aspect-video',
+                'relative w-full overflow-hidden',
+                !images?.image1 && 'border border-line-800',
               )}>
               {images?.image3 ? (
                 <Image
                   src={images?.image3 ?? ''}
                   alt='flasher'
                   fill
-                  className='object-cover'
+                  className='object-contain'
                   priority
                 />
               ) : (
                 <EmptyImg />
               )}
-            </RevealItem>
+            </Reveal>
             <RevealItem
               className={clsx(
-                'relative w-full aspect-video overflow-hidden',
+                isMobile
+                  ? 'aspect-7/16 max-[900px]:aspect-9/10 max-[500px]:aspect-6/10'
+                  : 'aspect-video',
+                'relative w-full overflow-hidden',
                 !images?.image2 && 'border border-line-800',
               )}>
               {images?.image2 ? (
@@ -184,7 +199,7 @@ const WorkSlug: FC<IProps> = ({
                   src={images?.image2 ?? ''}
                   alt='flasher'
                   fill
-                  className='object-cover'
+                  className='object-contain'
                   priority
                 />
               ) : (
@@ -193,7 +208,10 @@ const WorkSlug: FC<IProps> = ({
             </RevealItem>
             <RevealItem
               className={clsx(
-                'relative w-full col-span-full aspect-video overflow-hidden',
+                isMobile
+                  ? 'aspect-7/16 max-[900px]:aspect-9/10 max-[500px]:aspect-6/10'
+                  : 'aspect-video',
+                'relative w-full col-span-full  overflow-hidden',
                 !images?.image1 && 'border border-line-800',
               )}>
               {images?.image1 ? (
@@ -201,7 +219,7 @@ const WorkSlug: FC<IProps> = ({
                   src={images?.image1 ?? ''}
                   alt='flasher'
                   fill
-                  className='object-cover'
+                  className='object-contain'
                   priority
                 />
               ) : (
