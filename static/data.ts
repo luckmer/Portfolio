@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image'
 import EbookNookImg1 from '../public/EBookNook/image1.png'
 import EbookNookImg2 from '../public/EBookNook/image2.png'
 import EbookNookImg3 from '../public/EBookNook/image3.png'
@@ -20,7 +21,20 @@ import SquabbleImg4 from '../public/Squabble/image5.png'
 import SquabbleImg5 from '../public/Squabble/image6.png'
 import SquabbleImg6 from '../public/Squabble/image7.png'
 
-export const WORK = [
+export interface IWork {
+  id: string
+  color: string
+  title: string
+  year: string
+  role: string
+  description: string
+  images?: Record<string, StaticImageData>
+  content: Record<string, string>
+  isMobile?: boolean
+  tags: string[]
+}
+
+export const WORK: IWork[] = [
   {
     id: '01',
     title: 'EyetrackVR',
@@ -29,6 +43,7 @@ export const WORK = [
     color: 'bg-[#b1d1bb]',
     description:
       "Core maintainer of an open-source VR eye-tracking ecosystem with 1.1K+ GitHub stars, driving design, UX, and frontend architecture decisions across the project's core tools",
+    images: {},
     content: {
       link: 'https://github.com/EyeTrackVR',
       main: 'An opensource VR eye tracking project.',
