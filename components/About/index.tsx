@@ -35,7 +35,7 @@ const About = () => {
           <Reveal delay={0.2} className='max-w-640'>
             <Typography text='h1' class='leading-[1.6em]!'>
               Frontend Engineer with 4+ years of experience building web and mobile products across
-              crypto wallets and trading platforms. Built a multi-chain wallet with 30K+ active
+              crypto wallets and trading platforms. Built a multi-chain wallet with 50K+ active
               users and core-maintain an open-source VR eye-tracking project with 1.1K+ GitHub
               stars.
             </Typography>

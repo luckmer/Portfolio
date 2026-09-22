@@ -59,7 +59,7 @@ export const WORK: IWork[] = [
     year: '2023',
     role: 'Frontend Engineer',
     description:
-      'Complete rewrite of the ETVR firmware flashing tool (22+ stars) — flashing made accessible without a command line.',
+      'Complete rewrite of the ETVR firmware flashing tool (26+ stars) — flashing made accessible without a command line.',
     images: {
       image1: FlasherImg1,
       image2: FlasherImg2,
