@@ -84,7 +84,7 @@ const WorkSlug: FC<IProps> = ({
             {images?.image1 ? (
               <Image
                 src={images?.image1 ?? ''}
-                alt='flasher'
+                alt={`${title} cover`}
                 fill
                 className='object-contain'
                 priority
@@ -172,12 +172,12 @@ const WorkSlug: FC<IProps> = ({
                   ? 'aspect-7/16 max-[900px]:aspect-9/10 max-[500px]:aspect-6/10'
                   : 'aspect-video',
                 'relative w-full overflow-hidden',
-                !images?.image1 && 'border border-line-800',
+                !images?.image3 && 'border border-line-800',
               )}>
               {images?.image3 ? (
                 <Image
                   src={images?.image3 ?? ''}
-                  alt='flasher'
+                  alt={`${title} gallery 1`}
                   fill
                   className='object-contain'
                   priority
@@ -197,7 +197,7 @@ const WorkSlug: FC<IProps> = ({
               {images?.image2 ? (
                 <Image
                   src={images?.image2 ?? ''}
-                  alt='flasher'
+                  alt={`${title} gallery 2`}
                   fill
                   className='object-contain'
                   priority
@@ -212,12 +212,12 @@ const WorkSlug: FC<IProps> = ({
                   ? 'aspect-7/16 max-[900px]:aspect-9/10 max-[500px]:aspect-6/10'
                   : 'aspect-video',
                 'relative w-full col-span-full  overflow-hidden',
-                !images?.image1 && 'border border-line-800',
+                !(images?.image4 || images?.image1) && 'border border-line-800',
               )}>
-              {images?.image1 ? (
+              {images?.image4 || images?.image1 ? (
                 <Image
-                  src={images?.image1 ?? ''}
-                  alt='flasher'
+                  src={images?.image4 ?? images?.image1 ?? ''}
+                  alt={`${title} gallery 3`}
                   fill
                   className='object-contain'
                   priority
@@ -227,6 +227,77 @@ const WorkSlug: FC<IProps> = ({
               )}
             </RevealItem>
           </RevealGroup>
+          {images?.image5 && images?.image6 && images?.image7 && (
+            <RevealGroup
+              delay={0.1}
+              className={clsx(
+                'mt-24',
+                isMobile
+                  ? 'flex gap-12 max-[900px]:flex-col'
+                  : 'grid grid-cols-[1fr_1fr] gap-24 max-[900px]:grid-cols-1',
+              )}>
+              <Reveal
+                className={clsx(
+                  isMobile
+                    ? 'aspect-7/16 max-[900px]:aspect-9/10 max-[500px]:aspect-6/10'
+                    : 'aspect-video',
+                  'relative w-full overflow-hidden',
+                  !images?.image5 && 'border border-line-800',
+                )}>
+                {images?.image5 ? (
+                  <Image
+                    src={images?.image5 ?? ''}
+                    alt={`${title} gallery 4`}
+                    fill
+                    className='object-contain'
+                    priority
+                  />
+                ) : (
+                  <EmptyImg />
+                )}
+              </Reveal>
+              <RevealItem
+                className={clsx(
+                  isMobile
+                    ? 'aspect-7/16 max-[900px]:aspect-9/10 max-[500px]:aspect-6/10'
+                    : 'aspect-video',
+                  'relative w-full overflow-hidden',
+                  !images?.image6 && 'border border-line-800',
+                )}>
+                {images?.image6 ? (
+                  <Image
+                    src={images?.image6 ?? ''}
+                    alt={`${title} gallery 5`}
+                    fill
+                    className='object-contain'
+                    priority
+                  />
+                ) : (
+                  <EmptyImg />
+                )}
+              </RevealItem>
+              <RevealItem
+                className={clsx(
+                  isMobile
+                    ? 'aspect-7/16 max-[900px]:aspect-9/10 max-[500px]:aspect-6/10'
+                    : 'aspect-video',
+                  'relative w-full col-span-full  overflow-hidden',
+                  !images?.image7 && 'border border-line-800',
+                )}>
+                {images?.image7 ? (
+                  <Image
+                    src={images?.image7 ?? ''}
+                    alt={`${title} gallery 6`}
+                    fill
+                    className='object-contain'
+                    priority
+                  />
+                ) : (
+                  <EmptyImg />
+                )}
+              </RevealItem>
+            </RevealGroup>
+          )}
         </section>
       </div>
       <Footer />

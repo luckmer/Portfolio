@@ -4,12 +4,21 @@ import EbookNookImg3 from '../public/EBookNook/image3.png'
 import FlasherImg1 from '../public/FirmwareFlashingTool/image1.png'
 import FlasherImg2 from '../public/FirmwareFlashingTool/image2.png'
 import FlasherImg3 from '../public/FirmwareFlashingTool/image3.png'
+
 import MusicBotImg1 from '../public/MusicBot/image1.png'
 import MusicBotImg2 from '../public/MusicBot/image2.png'
 import MusicBotImg3 from '../public/MusicBot/image3.png'
 import WordlyImg1 from '../public/wordly/image1.png'
 import WordlyImg2 from '../public/wordly/image2.png'
 import WordlyImg3 from '../public/wordly/image3.png'
+
+import SquabbleImg7 from '../public/Squabble/image1.png'
+import SquabbleImg1 from '../public/Squabble/image2.png'
+import SquabbleImg2 from '../public/Squabble/image3.png'
+import SquabbleImg3 from '../public/Squabble/image4.png'
+import SquabbleImg4 from '../public/Squabble/image5.png'
+import SquabbleImg5 from '../public/Squabble/image6.png'
+import SquabbleImg6 from '../public/Squabble/image7.png'
 
 export const WORK = [
   {
@@ -52,6 +61,51 @@ export const WORK = [
   },
   {
     id: '03',
+    color: 'bg-[#78aaa5]',
+    title: 'Squabble',
+    year: '2026',
+    role: 'Frontend Engineer',
+    description:
+      'A single player word search game inspired by Squaredle, built from scratch to explore how the mechanics behind this type of game work.',
+    images: {
+      image1: SquabbleImg1,
+      image2: SquabbleImg3,
+      image3: SquabbleImg2,
+      image4: SquabbleImg4,
+      image5: SquabbleImg5,
+      image6: SquabbleImg6,
+      image7: SquabbleImg7,
+    },
+    content: {
+      link: 'https://github.com/luckmer/Squabble',
+      main: 'A single player word search game inspired by Squaredle, built from scratch.',
+      content1:
+        'Players search for words by connecting letters on a grid. The application also includes authentication, a personal dashboard, game history, statistics, and persistent user progress.',
+      content2:
+        'I built the frontend with Next.js and a Python/FastAPI backend, using the project as a way to understand how a word search game works under the hood, from word generation and validation to authentication, sessions, API communication, and persistent game data.',
+    },
+    tags: [
+      'NextJS',
+      'Python',
+      'Fastapi',
+      'jwt',
+      'tailwindcss',
+      'shadcn/ui',
+      'cookies',
+      'session',
+      'zod',
+      'zustand',
+      'aiosqlite',
+      'uv',
+      'clsx',
+      'cva',
+      'sonner',
+      'react icons',
+      'react hook form',
+    ],
+  },
+  {
+    id: '04',
     title: 'EbookNook',
     year: '2024',
     color: 'bg-[#e6b7b2]',
@@ -90,7 +144,7 @@ export const WORK = [
     ],
   },
   {
-    id: '04',
+    id: '05',
     title: 'Chunky bot',
     year: '2024',
     color: 'bg-[#c9bde0]',
@@ -111,7 +165,7 @@ export const WORK = [
     tags: ['Music', 'Discord', 'Typescript', 'Commands'],
   },
   {
-    id: '05',
+    id: '06',
     title: 'Wordly',
     year: '2026',
     color: 'bg-[#a9c9dd]',
