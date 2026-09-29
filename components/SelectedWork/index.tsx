@@ -31,7 +31,7 @@ const SelectedWork = () => {
       <RevealGroup
         delay={0.1}
         className='grid grid-cols-[1fr_1fr_1fr] gap-24 max-[1100px]:grid-cols-[1fr_1fr] max-[900px]:grid-cols-[1fr]'>
-        {WORK.map((el) => (
+        {WORK.slice(0, 6).map((el) => (
           <RevealItem key={el.id} className='h-full'>
             <Card
               tags={el.tags}

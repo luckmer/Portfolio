@@ -211,6 +211,25 @@ export const WORK: IWork[] = [
       'immer',
     ],
   },
+  {
+    id: '07',
+    title: 'Squaredle Solver',
+    year: '2026',
+    color: 'bg-[#c5d9a3]',
+    role: 'Solo Project',
+    description:
+      'A tiny Python script that solves Squaredle for me, because I got tired of missing the last few words.',
+    images: {},
+    content: {
+      link: 'https://github.com/luckmer/squaredle-solver',
+      main: 'A quick Python script that solves Squaredle puzzles.',
+      content1:
+        'Nothing fancy, just a script and a word list that finds the words hiding on the board.',
+      content2:
+        'I wrote it while working on Squabble, mostly to see how this kind of puzzle behaves from the other side.',
+    },
+    tags: ['Python', 'Solver', 'Squaredle', 'JSON'],
+  },
 ]
 
 export const WORK_MAP = WORK.reduce(
